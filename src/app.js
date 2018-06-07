@@ -1,6 +1,7 @@
 import { remote } from 'electron';
 import env from 'env';
 import jetpack from 'fs-jetpack';
+import Grid from './grid';
 
 import './stylesheets/main.css';
 
@@ -40,4 +41,6 @@ const gameCanvas = document.querySelector('#game');
 
 const ctx = gameCanvas.getContext('2d');
 
-ctx.fillRect(0, 0, 100, 100);
+ctx.fillRect(0, 0, 400, 400);
+
+const gameGrid = new Grid();
