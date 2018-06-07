@@ -41,6 +41,8 @@ const gameCanvas = document.querySelector('#game');
 
 const ctx = gameCanvas.getContext('2d');
 
-ctx.fillRect(0, 0, 400, 400);
-
 const gameGrid = new Grid();
+
+const result = gameGrid.draw(ctx);
+
+console.log('Resturns? ', result);

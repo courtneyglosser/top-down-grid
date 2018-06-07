@@ -22,4 +22,10 @@ describe('Hello Grid', () => {
     expect(myGrid.cols).to.not.equal(undefined);
     expect(typeof myGrid.cols).to.equal('number');
   });
+
+  it('Should return undefined', () => {
+    const myCanvas = document.createElement('CANVAS');
+    const ctx = myCanvas.getContext('2d');
+    expect(myGrid.draw(ctx)).to.equal(undefined);
+  });
 });
