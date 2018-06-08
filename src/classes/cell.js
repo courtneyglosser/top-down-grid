@@ -1,18 +1,22 @@
 
 
-module.exports = class Grid {
+module.exports = class Cell {
   constructor() {
-    this.rows = 4;
-    this.cols = 4;
-    this.cell = {
-      width: 100,
-      height: 100,
-    };
+    this.width = 100;
+    this.height = 100;
+    this.x = 0;
+    this.y = 0;
+  }
+
+  setCoords(x, y) {
+    this.x = x;
+    this.y = y;
   }
 
   draw(ctx) {
-    const height = this.cell.height * this.rows;
-    const width = this.cell.width * this.cols;
-    return ctx.strokeRect(0, 0, width, height);
+    const x = this.x * this.width;
+    const y = this.y * this.height;
+    console.log(`Drawing at (${x},${y})`);
+    return ctx.fillRect(x, y, this.width, this.height);
   }
 };
