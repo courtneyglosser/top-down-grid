@@ -1,7 +1,7 @@
 import { remote } from 'electron';
 import env from 'env';
 import jetpack from 'fs-jetpack';
-import Grid from './grid';
+import Grid from './classes/grid';
 
 import './stylesheets/main.css';
 
